@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+<head>
+     <title>html form validation</title>
+<style>
+	 
+input
+{
+width:400px;
+height:40px;
+border-radius:5px;
+border:3px solid red;
+font-size:15px;
+}
+span
+{
+color:red;
+font-size:15px;
+}
+</style>
+</head>
+<body>
+<form action="#" autocomplete="off" onsubmit="return validation()">
+<table align="center" cellspacing="20" >
+       
+	   <tr><td><input type="text" id="user" placeholder="user"></br>
+	       <span id="userr"></span>
+	   </td></tr>
+       <tr><td><input type="text" id="pass" placeholder="password"></br>
+	       <span id="passs"></span>
+	   </td></tr>
+       <tr><td><input type="text" id="conpass" placeholder="confirm password"></br>
+	       <span id="conpasss"></span>
+	   </td></tr> 
+	   <tr><td><input type="text" id="email" placeholder="email"></br>
+	       <span id="emaill"></span>
+	   </td></tr>
+	   <tr><td><input type="text" id="mobile" placeholder="mobile"></br>
+	        <span id="mobilee"></span>
+	   </td></tr>
+	   <tr><td><input type="submit" id="" placeholder=""></td></tr>
+</table>
+</form>
+
+<script type="text/javascript">
+     function validation()
+	 {
+	    var user = document.getElementById('user').value;
+		var pass = document.getElementById('pass').value;
+		var conpass = document.getElementById('conpass').value;
+		var email = document.getElementById('email').value;
+		var mobile = document.getElementById('mobile').value;
+		
+			if(user == "")	
+            {
+			     document.getElementById('userr').innerHTML="**please enter user name**";
+        	
+			}
+             if(pass == "")	
+            {
+			     document.getElementById('passs').innerHTML="**please enter password**";
+        	
+			}
+           if(conpass == "")	
+            {
+			     document.getElementById('conpasss').innerHTML="**please comfirm password**";
+        	
+	        }
+            if(email == "")	
+            {
+			     document.getElementById('emaill').innerHTML="**please enter email adress**";
+        	
+			} 
+            if(mobile == "")	
+            {
+			     document.getElementById('mobilee').innerHTML="**please enter mobile number**";
+        	
+			}
+
+	
+	
+	
+	
+	
+	
+	}
+</script>
+
+</body>
+</html>	 
